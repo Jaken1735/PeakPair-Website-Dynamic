@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>PeakPair - Trainer Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Modernizing colors and typography */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #1E1E1E; /* Full grey background */
+            color: white; /* White text color */
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+            color: #fff;
+        }
+
+        h1, .display-4 {
+            font-weight: 700;
+            font-size: 3em;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-inner {
+            margin-top: 20px;
+        }
+
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .btn-primary {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+            border: none;
+            border-radius: 20px;
+            font-weight: 600;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+            color: #333;
+        }
+
+        footer {
+            background: #1E1E1E;
+            color: #d1d1d1;
+        }
+
+        footer a {
+            color: #00bcd4;
+        }
+
+        footer a:hover {
+            color: #007bff;
+        }
+
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            filter: invert(1);
+        }
+
+        /* Ensuring fixed size for images */
+        .card-img-top {
+            width: 100%; /* Full width within the card */
+            height: 250px; /* Fixed height */
+            object-fit: cover; /* Ensures the image covers the area without distortion */
+        }
+    </style>
+
+</head>
+<body id="trainerDashboard">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/logo.jpg" alt="PeakPair Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="trainerLogin.html">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profileHomeTrainer.html">Profile</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero py-5 text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to Your Dashboard</h1>
+            <p class="lead">View recommended clients.</p>
+        </div>
+    </section>
+
+    <!-- Main content area -->
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Recommended Clients</h3>
+
+        <!-- Carousel for Client Recommendations -->
+        <div id="carouselFeed" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner" id="recommendations-container">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFeed" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselFeed" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mt-3 small">&copy; 2024 Fitness Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Image pool and counters for male and female images
+        const maxImages = 5; // Assuming you have 5 images per gender
+        let maleImageCounter = 0;
+        let femaleImageCounter = 0;
+
+        // Function to fetch and display recommended clients for the trainer
+        function fetchRecommendedClients(trainerId) {
+            fetch(`http://127.0.0.1:5000/recommendations/trainer/${trainerId}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Error: ${response.status} - ${response.statusText}`);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const container = document.getElementById('recommendations-container');
+                    container.innerHTML = '';  // Clear existing content
+
+                    // Group clients into chunks of 3 for each carousel item
+                    const chunks = [];
+                    for (let i = 0; i < data.length; i += 3) {
+                        chunks.push(data.slice(i, i + 3));
+                    }
+
+                    // Create carousel items, each containing up to 3 clients
+                    chunks.forEach((chunk, index) => {
+                        const activeClass = index === 0 ? 'active' : '';
+                        let clientsHTML = '';
+
+                        chunk.forEach(client => {
+                            let imagePath;
+
+                            if (client.gender === 'Male') {
+                                // Cycle through male images without repetition until all are used
+                                imagePath = `/assets/users/male/user${(maleImageCounter % maxImages) + 1}_m.png`;
+                                maleImageCounter++;
+                            } else {
+                                // Cycle through female images without repetition until all are used
+                                imagePath = `/assets/users/female/user${(femaleImageCounter % maxImages) + 1}_f.png`;
+                                femaleImageCounter++;
+                            }
+
+                            console.log('ImagePath:', imagePath);
+                            clientsHTML += `
+                                <div class="col-md-4">
+                                    <div class="card shadow-sm h-100">
+                                        <img src='${imagePath}' class="card-img-top" alt="${client.name}">
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title">${client.name}</h5>
+                                            <p class="card-text">Experience Level: ${client.experience_level}</p>
+                                            <p class="card-text">Location: ${client.geographic_area}</p>
+                                            <p class="card-text">Areas of Interest: ${client.training_areas_of_interest}</p>
+                                            <p class="card-text">Price limit: ${client.max_price_per_hour}</p>
+                                            <a href="/user_profile.html?id=${client.user_id}" class="btn btn-primary mt-auto"><i class="fas fa-user"></i> View Profile</a>
+                                        </div>
+                                        <div class="card-footer text-muted small">
+                                            Similarity Score: ${(client.similarity * 100).toFixed(2)}%
+                                        </div>
+                                    </div>
+                                </div>`;
+                        });
+
+                        // Add the carousel item with the 3 cards inside
+                        container.innerHTML += `
+                            <div class="carousel-item ${activeClass}">
+                                <div class="row">
+                                    ${clientsHTML}
+                                </div>
+                            </div>`;
+                    });
+                })
+                .catch(error => console.error('Error fetching recommended clients:', error));
+        }
+
+        // Initial fetch for recommended clients on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            const trainerId = 1; // Use actual trainer ID based on the logged-in trainer's data
+            fetchRecommendedClients(trainerId);
+        });
+</script>
+</body>
+</html>
+
+
+

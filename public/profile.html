@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Profile Section Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #1E1E1E; /* Full grey background */
+            color: white; /* White text color */
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        /* Profile Picture Styling */
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Profile Info Styling */
+        .profile-name {
+            font-weight: 700;
+            color: #904AFD;
+        }
+
+        .profile-stats div {
+            font-size: 1.1em;
+            color: #333;
+        }
+
+        .btn-outline-secondary {
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Card Styling for Workouts */
+        .card {
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .card-title {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .card-text {
+            color: #6c757d;
+        }
+
+        .btn-details {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+            border: none;
+            border-radius: 20px;
+            font-weight: 600;
+            color: #fff;
+            padding: 8px 20px;
+            transition: background 0.3s;
+        }
+
+        .btn-details:hover {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+        }
+
+        /* Star Rating Styling */
+        .rating-stars .star {
+            font-size: 24px;
+            color: #ccc;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .rating-stars .star.selected,
+        .rating-stars .star.hovered {
+            color: #FFD700; /* Gold color */
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1E1E1E;;
+        }
+
+        footer a {
+            color: #00bcd4;
+        }
+
+        footer a:hover {
+            color: #007bff;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body id="profile-page">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/logo.jpg" alt="PeakPair Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="userLogin.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="challenges.html">Monthly Challenges</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- User's Profile Picture -->
+            <div class="col-md-3 text-center">
+                <img src="/assets/users/female/user2_f.png" alt="User Profile Picture" class="profile-picture shadow">
+            </div>
+            <!-- User's Info and Stats -->
+            <div class="col-md-9">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h3 class="profile-name" id="profile-name">User123</h3>
+                </div>
+                <p class="text-muted">User-ID: <span id="profile-username">34</span></p>
+                <div class="d-flex profile-stats">
+                    <div class="me-4">
+                        <strong id="post-count">Workouts Completed:</strong> 22
+                    </div>
+                    <div class="me-4">
+                        <strong id="following-count">Monthly Bonus:</strong> Not Achieved
+                    </div>
+                </div>
+                <p class="mt-2 text-muted" id="profile-bio">Hi! I'm User34, a fitness enthusiast based in Stockholm with a passion for building strength and staying active. I've been training for over 5 years and love exploring different workout styles, from weightlifting and HIIT to yoga and mindfulness. My goal is to maintain a balanced lifestyle, both mentally and physically, and I believe that every workout is a step toward a healthier, happier life.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Upcoming Workouts Section -->
+    <div class="container mt-5">
+        <h4 class="mb-4">Upcoming Workouts</h4>
+        <div id="upcoming-container" class="row gy-4">
+            <!-- Workout Cards -->
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">HIIT Circuit</h5>
+                        <p class="card-text">Trainer: Chris Hemsworth</p>
+                        <p class="card-text">High-Intensity Interval Training for fat loss.</p>
+                        <button class="btn-details">View Details</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards dynamically if needed -->
+        </div>
+    </div>
+
+    <!-- Previous Workouts Section -->
+    <div class="container mt-5">
+        <h4 class="mb-4">Previous Workouts</h4>
+        <div id="profile-container" class="row gy-4">
+            <!-- Routine Cards -->
+            <div class="col-md-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Full Body Workout</h5>
+                        <p class="card-text">Trainer: Dwayne Johnson</p>
+                        <p class="card-text">A complete routine to work your entire body.</p>
+                        <p class="mt-2">Rate this workout:</p>
+                        <div class="rating-stars">
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                            <span class="star">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards dynamically if needed -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mt-3 small">&copy; 2024 PeakPair. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/routines.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

@@ -1,0 +1,393 @@
+/* =================== Variables and General Styles =================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/* CSS Variables for Easy Customization */
+ :root {
+    /* Color Palette */
+    --primary-color: #904AFD;
+    --secondary-color: #E0D1FF;
+    --accent-color: #90e0ef;
+    --dark-color: #333;
+    --light-color: #f8f9fa;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --muted-text-color: #666;
+    --white: #fff;
+
+    /* Font Sizes */
+    --h1-size: 3rem;
+    --h3-size: 2rem;
+    --base-font-size: 1rem;
+
+    /* Transition */
+    --transition-speed: 0.3s;
+
+    /* Shadows */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    font-size: var(--base-font-size);
+    color: var(--text-color);
+}
+
+h3 {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    font-size: var(--h3-size);
+}
+
+/* =================== Navbar Styling =================== */
+/* =================== Navbar Styling =================== */
+.navbar {
+    border-bottom: 3px solid #904AFD; /* Purple border at bottom */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Adjust shadow directly */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #333; /* Dark grey background */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF; /* White color for brand text */
+}
+
+.navbar-brand i {
+    margin-right: 10px;
+    color: #904AFD; /* Purple icon color to match theme */
+}
+
+.navbar-nav .nav-link {
+    margin-right: 15px;
+    font-size: 1.1rem;
+    color: #FFFFFF; /* White color for all nav links */
+    transition: color 0.3s; /* Transition for smooth hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #E0D1FF; /* Light purple on hover to match theme */
+}
+
+.navbar-nav .nav-link.active {
+    color: #904AFD; /* Purple color for active link */
+    font-weight: bold;
+    border-bottom: 2px solid #904AFD; /* Purple border for active link */
+}
+
+/* =================== Hero Section Styling =================== */
+ .hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background-size: cover;
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: var(--h1-size);
+    font-weight: 700;
+}
+
+.hero p.lead {
+    font-size: 1.25rem;
+    margin-top: 20px;
+}
+
+/* =================== Card Styling =================== */
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    color: var(--text-color);
+}
+
+.card-text {
+    color: var(--muted-text-color);
+}
+
+.card-footer {
+    background-color: var(--light-color);
+    font-size: 0.9rem;
+}
+
+/* =================== Button Styling =================== */
+.btn-primary {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: background-color var(--transition-speed), transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+    transition: transform var(--transition-speed);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+}
+
+/* Rounded Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+/* =================== Form Control Styling =================== */
+.form-control {
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    transition: border-color var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.25);
+    outline: none;
+}
+
+/* =================== Carousel Controls Styling =================== */
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute; /* Added */
+    top: 50%; /* Added */
+    transform: translateY(-50%); /* Added */
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    border: none;
+    transition: background-color var(--transition-speed);
+    z-index: 5; /* Ensure they appear above other content */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 20px;
+    height: 20px;
+    background-color: var(--dark-color);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/* Positioning for Carousel Controls */
+.carousel-control-prev {
+    left: -60px;
+}
+
+.carousel-control-next {
+    right: -60px;
+}
+
+/* =================== Footer Styling =================== */
+footer {
+    padding: 30px 0;
+    font-size: 1rem;
+    color: var(--white);
+    background: #1E1E1E;
+}
+
+footer a {
+    color: var(--secondary-color);
+    margin-right: 20px;
+    transition: color var(--transition-speed);
+}
+
+footer a:hover {
+    color: var(--primary-color);
+}
+
+.fab {
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: transform var(--transition-speed);
+}
+
+.fab:hover {
+    transform: scale(1.2);
+}
+
+/* =================== User Card Styling =================== */
+.user-card {
+    margin-bottom: 20px;
+}
+
+.profile-pic-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+}
+
+.user-info h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.user-info p {
+    color: var(--muted-text-color);
+    margin-bottom: 10px;
+}
+
+.user-info .btn {
+    margin-top: 5px;
+}
+
+/* =================== Specific Page Styling =================== */
+
+/* ---- Explore Page ---- */
+#explore-page .hero,
+#profile-page .hero,
+#challenges-page .hero {
+    background-color: var(--light-color);
+    color: var(--text-color);
+    padding: 40px 0;
+}
+
+#explore-page h3,
+#profile-page h3,
+#challenges-page h3 {
+    font-size: var(--h3-size);
+    color: var(--primary-color);
+}
+
+#explore-page .card,
+#profile-page .card,
+#challenges-page .card {
+    border-radius: 15px;
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+    box-shadow: var(--box-shadow);
+}
+
+#explore-page .card:hover,
+#profile-page .card:hover,
+#challenges-page .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Search Bar Styling */
+#explore-page .form-control {
+    border-radius: 30px;
+    padding: 15px 20px;
+    box-shadow: var(--box-shadow);
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+}
+
+#explore-page .form-control:focus {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border-color: var(--primary-color);
+}
+
+#explore-page .form-control::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Icon Styling for Search Bar */
+#explore-page .input-group {
+    position: relative;
+}
+
+#explore-page .input-group i {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #aaa;
+    transition: color var(--transition-speed);
+}
+
+#explore-page .form-control:focus + i {
+    color: var(--primary-color);
+}
+
+/* Profile Picture Styling */
+#profile-page .rounded-circle {
+    border: 3px solid #ccc;
+    box-shadow: var(--box-shadow);
+    transition: box-shadow var(--transition-speed);
+}
+
+#profile-page .rounded-circle:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Stats Section */
+#profile-page .d-flex div {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* ---- Challenges Page ---- */
+/* Specific styles for challenges page if needed */
+
+/* ---- Challenge Details Page ----
+#challenge-details-page h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#challenge-details-page p.lead {
+    font-size: 1.25rem;
+    margin-bottom: 20px;
+}
+
+#challenge-details-page .btn {
+    margin-top: 20px;
+} */
+
+/* =================== Responsive Adjustments =================== */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 20px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none; /* Hide carousel controls on smaller screens */
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}

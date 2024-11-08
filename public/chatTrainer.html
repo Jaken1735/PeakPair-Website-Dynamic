@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Trainer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background-color: #1E1E1E;
+            color: white;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        .content-wrapper {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .chat-container {
+            width: 100%;
+            max-width: 600px;
+            height: 80vh;
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #904AFD, #E0D1FF);
+            padding: 15px;
+            color: #ffffff;
+        }
+
+        .chat-header img {
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 15px;
+            border: 2px solid #ffffff;
+        }
+
+        .chat-header h3 {
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .chat-header .status {
+            font-size: 0.85rem;
+            color: #c8f1c4;
+        }
+
+        .messages {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            overflow-y: auto;
+            flex-grow: 1;
+            background-color: #f9f9fc;
+        }
+
+        .message {
+            max-width: 80%;
+            padding: 10px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .message.trainer {
+            background-color: #f0f0f0;
+            align-self: flex-start;
+        }
+
+        .message.user {
+            background-color: #904AFD;
+            color: #fff;
+            align-self: flex-end;
+        }
+
+        .input-area {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background-color: #ffffff;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 10px 15px;
+            border-radius: 20px;
+            border: 1px solid #ddd;
+            font-size: 0.9rem;
+            outline: none;
+            transition: box-shadow 0.3s;
+        }
+
+        .input-area input:focus {
+            box-shadow: 0 0 5px rgba(144, 74, 253, 0.3);
+        }
+
+        .input-area button {
+            background-color: #904AFD;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            margin-left: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .input-area button:hover {
+            background-color: #743acb;
+        }
+
+        .meeting-button {
+            background-color: #28a745;
+            color: #ffffff;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            margin: 10px;
+            align-self: center;
+        }
+
+        .meeting-button:hover {
+            background-color: #218838;
+        }
+
+        .modal-header, .modal-footer {
+            border: none;
+        }
+
+        footer {
+            background: #1E1E1E;
+            color: #d1d1d1;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/logo.jpg" alt="PeakPair Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="userLogin.html">Recommendations</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="explore.html">Explore</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="challenges.html">Monthly Challenges</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="content-wrapper">
+        <div class="chat-container">
+            <div class="chat-header">
+                <img src="/assets/trainers/female/trainer3_f.png" alt="Trainer Profile">
+                <div>
+                    <h3>Need help?</h3>
+                    <div class="status">We reply immediately</div>
+                </div>
+            </div>
+
+            <div class="messages" id="messageContainer">
+                <div class="message trainer">Hi! Do you want to book a meeting?</div>
+            </div>
+
+            <button class="meeting-button" data-bs-toggle="modal" data-bs-target="#dateTimeModal">Propose a Date & Time for Zoom Meeting</button>
+
+            <div class="input-area">
+                <input type="text" id="userInput" placeholder="Type your message here...">
+                <button onclick="sendMessage()">
+                    <img src="/assets/send2.png" alt="Send" style="width: 20px; height: 20px;">
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mt-3 small">&copy; 2024 Fitness Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="dateTimeModal" tabindex="-1" aria-labelledby="dateTimeModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="dateTimeModalLabel">Schedule a Zoom Meeting</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <label for="meetingDateTime" class="form-label">Choose Date & Time:</label>
+                    <input type="datetime-local" id="meetingDateTime" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="confirmMeeting()">Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const messageContainer = document.getElementById('messageContainer');
+
+        const trainerResponses = [
+            "I'm here to help! Are you interested in weight training or endurance?",
+            "We can schedule an initial meeting via Zoom or in-person.",
+            "Feel free to ask about rates, availability, or any other questions you may have!",
+            "We have flexible timings and customized plans. Let me know what works for you!"
+        ];
+
+        let responseIndex = 0;
+
+        function sendMessage() {
+            const userInput = document.getElementById('userInput').value;
+            if (userInput.trim() === "") return;
+
+            const userMessage = document.createElement('div');
+            userMessage.className = 'message user';
+            userMessage.textContent = userInput;
+            messageContainer.appendChild(userMessage);
+
+            document.getElementById('userInput').value = '';
+            messageContainer.scrollTop = messageContainer.scrollHeight;
+            setTimeout(() => {
+                const trainerMessage = document.createElement('div');
+                trainerMessage.className = 'message trainer';
+                trainerMessage.textContent = trainerResponses[responseIndex];
+                messageContainer.appendChild(trainerMessage);
+                messageContainer.scrollTop = messageContainer.scrollHeight;
+                responseIndex = (responseIndex + 1) % trainerResponses.length;
+            }, 1000);
+        }
+
+
+        function confirmMeeting() {
+            const dateTimePicker = document.getElementById('meetingDateTime');
+            const dateTime = new Date(dateTimePicker.value);
+            if (dateTime) {
+                const formattedDate = dateTime.toLocaleString();
+                const userMessage = document.createElement('div');
+                userMessage.className = 'message user';
+                userMessage.textContent = `Proposed Meeting: ${formattedDate}`;
+                messageContainer.appendChild(userMessage);
+
+
+                setTimeout(() => {
+                    const trainerMessage = document.createElement('div');
+                    trainerMessage.className = 'message trainer';
+                    trainerMessage.textContent = "Thank you for the proposal! I'll confirm shortly.";
+                    messageContainer.appendChild(trainerMessage);
+                    messageContainer.scrollTop = messageContainer.scrollHeight;
+                }, 1000);
+
+                dateTimePicker.value = "";
+                var dateTimeModal = new bootstrap.Modal(document.getElementById('dateTimeModal'));
+                dateTimeModal.hide();
+            }
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>PeakPair - Monthly Challenges</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        /* Modernizing colors and typography */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .navbar {
+            background-color: #1E1E1E; /* Full grey background */
+            color: white; /* White text color */
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            width: auto;
+        }
+
+        .hero {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+            color: #fff;
+        }
+
+        h1, .display-4 {
+            font-weight: 700;
+            font-size: 3em;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .challenge-card {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            padding: 20px;
+            text-align: center;
+            background-color: #fff;
+        }
+
+        .challenge-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .challenge-card h5 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e9ecef;
+        }
+
+        .progress-bar {
+            background: linear-gradient(135deg, #904AFD, #E0D1FF);
+            border-radius: 5px;
+        }
+
+        .btn-challenge {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-challenge:hover {
+            background: linear-gradient(to right, #904AFD, #E0D1FF);
+        }
+
+        footer {
+            background: #1E1E1E;
+            color: #d1d1d1;
+        }
+
+        footer a {
+            color: #00bcd4;
+        }
+
+        footer a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body id="challenges-page">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="/assets/logo.jpg" alt="PeakPair Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="userLogin.html">Recommendations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="explore.html">Explore</a></li>
+                    <li class="nav-item"><a class="nav-link" href="profile.html">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="challenges.html">Monthly Challenges</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero py-5 text-center">
+        <div class="container">
+            <h1 class="display-4"> Take on Our Monthly Challenges</h1>
+            <p class="lead">By completing all challenges, you will receive your next workout for free!</p>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <div class="container mt-5">
+        <h3 class="text-center mb-4">Current Challenges</h3>
+        <div class="row gy-4" id="challenges-container">
+            <!-- Challenge cards will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mt-3 small">&copy; 2024 PeakPair. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/displayChallenges.js"></script>
+</body>
+</html>
+
+
+
+
