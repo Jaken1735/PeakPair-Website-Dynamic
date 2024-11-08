@@ -1,0 +1,854 @@
+[
+    {
+        "id": 0,
+        "name": "Hedda",
+        "age": 23,
+        "gender": "Female",
+        "min_price_per_hour": "1400SEK",
+        "training_areas": [
+            "Flexibility",
+            "Mobility"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "CSCS",
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 1,
+        "name": "Ingrid",
+        "age": 33,
+        "gender": "Female",
+        "min_price_per_hour": "1400SEK",
+        "training_areas": [
+            "Strength Training",
+            "Pilates"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "CSCS",
+            "ISSA Certified",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 2,
+        "name": "Karl",
+        "age": 28,
+        "gender": "Male",
+        "min_price_per_hour": "550SEK",
+        "training_areas": [
+            "Meditation",
+            "Boxing"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 3,
+        "name": "Lukas",
+        "age": 31,
+        "gender": "Male",
+        "min_price_per_hour": "1050SEK",
+        "training_areas": [
+            "Olympic lifts",
+            "Mobility",
+            "Swimming"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 4,
+        "name": "Liam",
+        "age": 33,
+        "gender": "Male",
+        "min_price_per_hour": "1150SEK",
+        "training_areas": [
+            "Cardio",
+            "Mindfulness",
+            "Boxing"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 5,
+        "name": "Sam",
+        "age": 35,
+        "gender": "Male",
+        "min_price_per_hour": "950SEK",
+        "training_areas": [
+            "Climbing",
+            "Cardio"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "NASM Certified",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 6,
+        "name": "Sam",
+        "age": 39,
+        "gender": "Male",
+        "min_price_per_hour": "650SEK",
+        "training_areas": [
+            "Climbing",
+            "Flexibility"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "NASM Certified",
+            "ACE Personal Trainer"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 7,
+        "name": "Jessica",
+        "age": 36,
+        "gender": "Female",
+        "min_price_per_hour": "600SEK",
+        "training_areas": [
+            "Swimming",
+            "Strength Training"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 8,
+        "name": "Ludvig",
+        "age": 48,
+        "gender": "Male",
+        "min_price_per_hour": "300SEK",
+        "training_areas": [
+            "Cardio"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 9,
+        "name": "Martin",
+        "age": 39,
+        "gender": "Male",
+        "min_price_per_hour": "1500SEK",
+        "training_areas": [
+            "Strength Training",
+            "Climbing",
+            "Bodybuilding"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 10,
+        "name": "Sam",
+        "age": 27,
+        "gender": "Male",
+        "min_price_per_hour": "1100SEK",
+        "training_areas": [
+            "Weightlifting"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 11,
+        "name": "Hedda",
+        "age": 44,
+        "gender": "Female",
+        "min_price_per_hour": "350SEK",
+        "training_areas": [
+            "Swimming",
+            "Olympic lifts",
+            "Flexibility"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 12,
+        "name": "Theodor",
+        "age": 46,
+        "gender": "Male",
+        "min_price_per_hour": "400SEK",
+        "training_areas": [
+            "Mindfulness"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 13,
+        "name": "Molly",
+        "age": 32,
+        "gender": "Female",
+        "min_price_per_hour": "1350SEK",
+        "training_areas": [
+            "Pilates",
+            "Yoga"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 14,
+        "name": "Maja",
+        "age": 33,
+        "gender": "Female",
+        "min_price_per_hour": "1000SEK",
+        "training_areas": [
+            "Strength Training"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 15,
+        "name": "Lea",
+        "age": 30,
+        "gender": "Female",
+        "min_price_per_hour": "1150SEK",
+        "training_areas": [
+            "CrossFit",
+            "Cardio"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 16,
+        "name": "Noel",
+        "age": 41,
+        "gender": "Male",
+        "min_price_per_hour": "350SEK",
+        "training_areas": [
+            "Flexibility",
+            "Mobility",
+            "Bodybuilding"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "NASM Certified",
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 17,
+        "name": "Ellen",
+        "age": 23,
+        "gender": "Female",
+        "min_price_per_hour": "300SEK",
+        "training_areas": [
+            "Cardio",
+            "CrossFit"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 18,
+        "name": "Sam",
+        "age": 47,
+        "gender": "Male",
+        "min_price_per_hour": "1400SEK",
+        "training_areas": [
+            "Meditation",
+            "Running"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 19,
+        "name": "Gustav",
+        "age": 25,
+        "gender": "Male",
+        "min_price_per_hour": "400SEK",
+        "training_areas": [
+            "Yoga",
+            "Mindfulness"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ACE Personal Trainer"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 20,
+        "name": "Leo",
+        "age": 32,
+        "gender": "Male",
+        "min_price_per_hour": "1100SEK",
+        "training_areas": [
+            "Cardio",
+            "Mobility"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "NASM Certified",
+            "ACE Personal Trainer",
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 21,
+        "name": "Leo",
+        "age": 39,
+        "gender": "Male",
+        "min_price_per_hour": "650SEK",
+        "training_areas": [
+            "Running"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 22,
+        "name": "Wilma",
+        "age": 34,
+        "gender": "Female",
+        "min_price_per_hour": "750SEK",
+        "training_areas": [
+            "CrossFit",
+            "Mindfulness"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "ACE Personal Trainer"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 23,
+        "name": "Tilda",
+        "age": 28,
+        "gender": "Female",
+        "min_price_per_hour": "500SEK",
+        "training_areas": [
+            "Flexibility",
+            "Strength Training"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "CSCS",
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 24,
+        "name": "Karl",
+        "age": 50,
+        "gender": "Male",
+        "min_price_per_hour": "750SEK",
+        "training_areas": [
+            "Swimming",
+            "CrossFit"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 25,
+        "name": "Albin",
+        "age": 29,
+        "gender": "Male",
+        "min_price_per_hour": "1100SEK",
+        "training_areas": [
+            "Boxing",
+            "Mindfulness",
+            "Meditation"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "NASM Certified",
+            "ISSA Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 26,
+        "name": "Otto",
+        "age": 29,
+        "gender": "Male",
+        "min_price_per_hour": "850SEK",
+        "training_areas": [
+            "CrossFit"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "NASM Certified",
+            "ACE Personal Trainer",
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 27,
+        "name": "Noel",
+        "age": 25,
+        "gender": "Male",
+        "min_price_per_hour": "300SEK",
+        "training_areas": [
+            "Flexibility"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "ISSA Certified",
+            "ACE Personal Trainer"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 28,
+        "name": "Siri",
+        "age": 23,
+        "gender": "Female",
+        "min_price_per_hour": "750SEK",
+        "training_areas": [
+            "Cardio",
+            "Yoga",
+            "Mobility"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "NASM Certified",
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 29,
+        "name": "Anna",
+        "age": 44,
+        "gender": "Female",
+        "min_price_per_hour": "1500SEK",
+        "training_areas": [
+            "Running",
+            "Olympic lifts"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 30,
+        "name": "Anna",
+        "age": 36,
+        "gender": "Female",
+        "min_price_per_hour": "1100SEK",
+        "training_areas": [
+            "Mindfulness",
+            "Cycling",
+            "Swimming"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "CSCS",
+            "ISSA Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 31,
+        "name": "Jacob",
+        "age": 24,
+        "gender": "Male",
+        "min_price_per_hour": "800SEK",
+        "training_areas": [
+            "Strength Training",
+            "Boxing"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 32,
+        "name": "Elias",
+        "age": 27,
+        "gender": "Male",
+        "min_price_per_hour": "1250SEK",
+        "training_areas": [
+            "Olympic lifts",
+            "Climbing"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "ISSA Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 33,
+        "name": "Jacob",
+        "age": 46,
+        "gender": "Male",
+        "min_price_per_hour": "1450SEK",
+        "training_areas": [
+            "Flexibility",
+            "Boxing",
+            "Cardio"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 34,
+        "name": "Martin",
+        "age": 40,
+        "gender": "Male",
+        "min_price_per_hour": "1250SEK",
+        "training_areas": [
+            "Meditation",
+            "Cardio"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "CSCS",
+            "NASM Certified",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 35,
+        "name": "Maja",
+        "age": 50,
+        "gender": "Female",
+        "min_price_per_hour": "750SEK",
+        "training_areas": [
+            "Mobility"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "ACE Personal Trainer",
+            "ISSA Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 36,
+        "name": "Filippa",
+        "age": 24,
+        "gender": "Female",
+        "min_price_per_hour": "400SEK",
+        "training_areas": [
+            "Strength Training",
+            "Mobility"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ISSA Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 37,
+        "name": "Harry",
+        "age": 31,
+        "gender": "Male",
+        "min_price_per_hour": "650SEK",
+        "training_areas": [
+            "CrossFit",
+            "Cycling"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "CSCS",
+            "ACE Personal Trainer"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 38,
+        "name": "Leo",
+        "age": 44,
+        "gender": "Male",
+        "min_price_per_hour": "550SEK",
+        "training_areas": [
+            "Yoga",
+            "CrossFit"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 39,
+        "name": "Fredrik",
+        "age": 39,
+        "gender": "Male",
+        "min_price_per_hour": "1050SEK",
+        "training_areas": [
+            "Cardio"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ISSA Certified",
+            "ACE Personal Trainer",
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 40,
+        "name": "Johan",
+        "age": 34,
+        "gender": "Male",
+        "min_price_per_hour": "350SEK",
+        "training_areas": [
+            "Boxing",
+            "Swimming",
+            "Climbing"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ISSA Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 41,
+        "name": "Alicia",
+        "age": 49,
+        "gender": "Female",
+        "min_price_per_hour": "1400SEK",
+        "training_areas": [
+            "Olympic lifts",
+            "Cardio"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "ACE Personal Trainer"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 42,
+        "name": "Alicia",
+        "age": 23,
+        "gender": "Female",
+        "min_price_per_hour": "1300SEK",
+        "training_areas": [
+            "Cycling"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "Yoga Alliance Certified",
+            "CSCS"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 43,
+        "name": "Otto",
+        "age": 29,
+        "gender": "Male",
+        "min_price_per_hour": "1450SEK",
+        "training_areas": [
+            "Flexibility",
+            "Meditation",
+            "Swimming"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "ACE Personal Trainer"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 44,
+        "name": "Ingrid",
+        "age": 27,
+        "gender": "Female",
+        "min_price_per_hour": "850SEK",
+        "training_areas": [
+            "Cardio",
+            "Olympic lifts",
+            "Weightlifting"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "NASM Certified",
+            "ACE Personal Trainer",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 45,
+        "name": "Elias",
+        "age": 26,
+        "gender": "Male",
+        "min_price_per_hour": "750SEK",
+        "training_areas": [
+            "Strength Training",
+            "Running"
+        ],
+        "level_of_expertise": "Expert",
+        "licenses_certificates": [
+            "NASM Certified",
+            "ACE Personal Trainer",
+            "Yoga Alliance Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 46,
+        "name": "Alicia",
+        "age": 47,
+        "gender": "Female",
+        "min_price_per_hour": "1200SEK",
+        "training_areas": [
+            "Meditation"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "ISSA Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 47,
+        "name": "Agnes",
+        "age": 22,
+        "gender": "Female",
+        "min_price_per_hour": "1000SEK",
+        "training_areas": [
+            "Weightlifting",
+            "Cardio"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 48,
+        "name": "Alicia",
+        "age": 22,
+        "gender": "Female",
+        "min_price_per_hour": "550SEK",
+        "training_areas": [
+            "Cycling",
+            "Running",
+            "CrossFit"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "ACE Personal Trainer",
+            "Yoga Alliance Certified",
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    },
+    {
+        "id": 49,
+        "name": "Alva",
+        "age": 27,
+        "gender": "Female",
+        "min_price_per_hour": "1500SEK",
+        "training_areas": [
+            "Meditation"
+        ],
+        "level_of_expertise": "Intermediate",
+        "licenses_certificates": [
+            "NASM Certified"
+        ],
+        "geographic_area": "Stockholm"
+    }
+]
